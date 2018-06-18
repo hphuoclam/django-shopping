@@ -1,6 +1,9 @@
 from django.db import models
 from django.urls import reverse
+import datetime
+import os
 
+STATIC_UPLOAD_PRODUCT_URL = 'static/upload/product/'
 
 class Category(models.Model):
     name = models.CharField(max_length=150, db_index=True)
@@ -19,6 +22,16 @@ class Category(models.Model):
     def get_absolute_url(self):
         return reverse('shop:product_list_by_category', args=[self.slug])
 
+def upload_product_image(instance, filename):
+
+    time = datetime.datetime.now().timestamp()
+    ext = filename.split('.')[-1]
+    name = (instance.name).replace(" ", "_")
+    filename = "%s_%s.%s" % (time, instance.slug, ext)
+    today = datetime.datetime.now()
+    today_path = today.strftime("%Y/%m/%d")
+    fullname = os.path.join(STATIC_UPLOAD_PRODUCT_URL + today_path + '/', filename)
+    return fullname
 
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
@@ -30,7 +43,7 @@ class Product(models.Model):
     stock = models.PositiveIntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True)
+    image = models.ImageField(upload_to=upload_product_image , blank=True)
 
     class Meta:
         ordering = ('name', )
