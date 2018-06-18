@@ -1,0 +1,7 @@
+Django==2.0.1
+Pillow==5.0.0
+pytz==2017.3
+psycopg2-binary
+django-heroku
+gunicorn
+dj_database_url
