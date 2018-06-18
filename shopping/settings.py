@@ -30,9 +30,6 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
-    'shop.apps.ShopConfig',
-    'cart.apps.CartConfig',
-    'orders.apps.OrdersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +40,9 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'shop',
+    'cart',
+    'orders',
 ]
 
 MIDDLEWARE = [
