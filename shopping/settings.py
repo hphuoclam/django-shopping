@@ -121,6 +121,11 @@ LANGUAGES = (
     ('en', _('English')),
 )
 
+PRICES = (
+    ('vi', '₫'),
+    ('en', '$'),
+)
+
 DEFAULT_LANGUAGE = 1
 
 LOCALE_PATHS = (
