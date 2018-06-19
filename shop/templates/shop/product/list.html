@@ -1,7 +1,8 @@
 {% extends 'shop/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block title %}
-    {% if category %}{{ category.name }} {% else %} Products {% endif %}
+    {% if category %}{{ category.name }} {% else %} {% trans 'Products' %} {% endif %}
 {% endblock %}
 
 {% load custom_tags %}
@@ -37,9 +38,9 @@
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module">
-            <h4>Categories</h4>
+            <h4>{% trans 'Categories' %}</h4>
             <ol class="list-unstyled">
-              <li {% if not category %} class="active"{% endif %}><a href="{% url 'shop:product_list' %}">All</a></li>
+              <li {% if not category %} class="active"{% endif %}><a href="{% url 'shop:product_list' %}">{% trans 'All' %}</a></li>
             {% for c in categories %}
 
               <li {% if category.slug == c.slug %} class="active"{% endif %}>

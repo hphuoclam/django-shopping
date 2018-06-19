@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-19 02:05+0000\n"
+"POT-Creation-Date: 2018-06-19 07:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,19 +20,118 @@ msgstr ""
 
 #: cart/forms.py:9
 msgid "quantity"
+msgstr "số lượng"
+
+#: cart/templates/cart/detail.html:7 cart/templates/cart/detail.html:14
+msgid "Your Shopping Cart"
+msgstr "Giỏ hàng của bạn"
+
+#: cart/templates/cart/detail.html:18 shop/templates/shop/base.html:21
+msgid "My Shopping Order:"
+msgstr "Đơn đặt hàng của tôi:"
+
+#: cart/templates/cart/detail.html:20 shop/templates/shop/base.html:23
+msgid "item"
+msgstr "mục"
+
+#: cart/templates/cart/detail.html:23 shop/templates/shop/base.html:26
+msgid "Your cart is empty."
+msgstr "Giỏ của bạn trống."
+
+#: cart/templates/cart/detail.html:31
+#: venv/lib/python3.6/site-packages/django/db/models/fields/files.py:359
+msgid "Image"
+msgstr "Hình ảnh"
+
+#: cart/templates/cart/detail.html:32
+msgid "Product"
+msgstr "Sản phẩm"
+
+#: cart/templates/cart/detail.html:33
+msgid "Quantity"
+msgstr "Số lượng"
+
+#: cart/templates/cart/detail.html:34 cart/templates/cart/detail.html:58
+msgid "Remove"
+msgstr "Xóa bỏ"
+
+#: cart/templates/cart/detail.html:35
+msgid "Unit Price"
+msgstr "Đơn giá"
+
+#: cart/templates/cart/detail.html:36
+msgid "Price"
+msgstr "Giá"
+
+#: cart/templates/cart/detail.html:73
+msgid "Continue Shopping"
 msgstr ""
 
-#: shop/templates/shop/base.html:16
+#: cart/templates/cart/detail.html:74
+#: orders/templates/orders/order/create.html:12
+msgid "Checkout"
+msgstr "Tiếp tục mua sắm"
+
+#: orders/templates/orders/order/create.html:5
+msgid "Your Shopping Cart| Checkout"
+msgstr "Giỏ hàng của bạn | Checkout"
+
+#: orders/templates/orders/order/create.html:21
+msgid "Your Order"
+msgstr "Đơn hàng của bạn"
+
+#: orders/templates/orders/order/create.html:31
+msgid "Total Cost:"
+msgstr "Tổng chi phí:"
+
+#: orders/templates/orders/order/created.html:6
+msgid "Your Shopping Cart| Thank you"
+msgstr "Giỏ hàng của bạn | Cảm ơn bạn"
+
+#: orders/templates/orders/order/created.html:13
+msgid "Thank You For Shopping With Us"
+msgstr "Cảm ơn đã đi mua sắm với chúng tôi"
+
+#: orders/templates/orders/order/created.html:14
+msgid "Your order has been successfully completed. Your order number is"
+msgstr "Đơn hàng của bạn đã được hoàn tất. số đơn đặt hàng của bạn là"
+
+#: shop/templates/shop/base.html:17
 msgid "haha"
 msgstr "Tiếng Việt kaka"
 
-#: shopping/settings.py:118
-msgid "English"
-msgstr "English"
+#: shop/templates/shop/navbar.html:43
+msgid "Logout"
+msgstr "Đăng xuất"
 
-#: shopping/settings.py:119
+#: shop/templates/shop/navbar.html:46
+msgid "Sign in"
+msgstr "Đăng nhập"
+
+#: shop/templates/shop/navbar.html:47
+msgid "Sign up"
+msgstr "Đăng ký"
+
+#: shop/templates/shop/product/detail.html:7
+#: shop/templates/shop/product/list.html:5
+msgid "Products"
+msgstr "Các sản phẩm"
+
+#: shop/templates/shop/product/list.html:41
+msgid "Categories"
+msgstr "Thể loại"
+
+#: shop/templates/shop/product/list.html:43
+msgid "All"
+msgstr "Tất cả"
+
+#: shopping/settings.py:120
 msgid "VietNam"
 msgstr "Tiếng Việt"
+
+#: shopping/settings.py:121
+msgid "English"
+msgstr "English"
 
 #: venv/lib/python3.6/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"
@@ -401,10 +500,6 @@ msgstr ""
 
 #: venv/lib/python3.6/site-packages/django/db/models/fields/files.py:221
 msgid "File"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/files.py:359
-msgid "Image"
 msgstr ""
 
 #: venv/lib/python3.6/site-packages/django/db/models/fields/related.py:780

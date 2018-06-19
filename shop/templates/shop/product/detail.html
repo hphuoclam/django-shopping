@@ -1,9 +1,10 @@
 {% extends 'shop/base.html' %}
 {% load static %}
 {% load custom_tags %}
+{% load i18n %}
 
 {% block title %}
-    {% if category %}{{ category.name }} {% else %} Products {% endif %}
+    {% if category %}{{ category.name }} {% else %} {% trans 'Products' %} {% endif %}
 {% endblock %}
 
 {% block content %}

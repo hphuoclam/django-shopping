@@ -15,18 +15,18 @@
 <div class="container">
     <div class="row" style="margin-top: 6%">
         <h1>{% trans 'haha' %}</h1>
-        <button class="btn btn-info pull-right">
+        <span class="badge pull-right" style="padding: 6px 12px; background: green">
             {% with totail_items=cart|length %}
                 {% if cart|length > 0 %}
-                    My Shopping Order:
+                    {% trans 'My Shopping Order:' %}
                     <a href="{% url "cart:cart_detail" %}" style="color: #ffffff">
-                        {{ totail_items }} item {{ totail_items|pluralize }}, {{ cart.get_total_price|price_view }}
+                        {{ totail_items }} {% trans 'item' %} {{ totail_items|pluralize }}, {{ cart.get_total_price|price_view }}
                     </a>
                     {% else %}
-                    Your cart is empty.
+                    {% trans 'Your cart is empty.' %}
                 {% endif %}
             {% endwith %}
-         </button>
+         </span>
     </div>
 </div>
 {% block content %}

@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'shopping.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'shopping.urls'
@@ -120,6 +121,7 @@ LANGUAGES = (
     ('en', _('English')),
 )
 
+DEFAULT_LANGUAGE = 1
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
@@ -127,8 +129,8 @@ LOCALE_PATHS = (
 
 TIME_ZONE = 'UTC'
 USE_I18N = True
-USE_L10N = True
-USE_TZ = True
+USE_L10N = False
+USE_TZ = False
 
 # Change 'default' database configuration with $DATABASE_URL.
 DATABASES['default'].update(dj_database_url.config(conn_max_age=500, ssl_require=True))

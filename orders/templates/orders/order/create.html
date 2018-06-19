@@ -1,14 +1,15 @@
 {% extends 'shop/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block title %}
-    Your Shopping Cart| Checkout
+    {% trans 'Your Shopping Cart| Checkout' %}
 {% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="row" style="margin-top: 6%">
             <div class="col-md-8">
-                <h4 class="page-header">Checkout</h4>
+                <h4 class="page-header">{% trans 'Checkout' %}</h4>
                 <form action="." method="post">
                     {% csrf_token %}
                     {{ form.as_p }}<br>
@@ -17,7 +18,7 @@
             </div>
             <div class="col-md-4">
                 <div class="page-header">
-                    Your Order
+                    {% trans 'Your Order' %}
                 </div>
                 <ul class="list-group">
                     {% for item in cart %}
@@ -27,7 +28,7 @@
                         </li>
                     {% endfor %}
 
-                <li class="list-group-item active">Total Cost: {{ cart.get_total_price }}</li>
+                <li class="list-group-item active">{% trans 'Total Cost:' %} {{ cart.get_total_price }}</li>
                 </ul>
 
             </div>
