@@ -15,16 +15,6 @@
 <div class="container">
     <div class="row" style="margin-top: 6%">
         <h1>{% trans 'haha' %}</h1>
-        <form action="{% url 'set_language' %}" method="post">
-            {% csrf_token %}
-            <input name="next" type="hidden" value="/" />
-            <select name="language">
-                {% for lang in LANGUAGES %}
-                        <option value="{{ lang.0 }}" {% if lang.0 == SELECTEDLANG %}selected{% endif %}>{{ lang.1 }}</option>
-                {% endfor %}
-            </select>
-            <input type="submit" value="Go" />
-        </form>
         <button class="btn btn-info pull-right">
             {% with totail_items=cart|length %}
                 {% if cart|length > 0 %}

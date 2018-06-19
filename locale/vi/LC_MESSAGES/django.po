@@ -24,7 +24,7 @@ msgstr ""
 
 #: shop/templates/shop/base.html:16
 msgid "haha"
-msgstr "Tiếng việt kaka"
+msgstr "Tiếng Việt kaka"
 
 #: shopping/settings.py:118
 msgid "English"
