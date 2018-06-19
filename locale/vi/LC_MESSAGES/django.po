@@ -33,7 +33,7 @@ msgstr "Đơn đặt hàng của tôi:"
 #: cart/templates/cart/detail.html:20 shop/templates/shop/base.html:23
 #: shop/templates/shop/base.html:36
 msgid "item"
-msgstr "mục"
+msgstr "sản phẩm"
 
 #: cart/templates/cart/detail.html:23 shop/templates/shop/base.html:26
 #: shop/templates/shop/base.html:38 shop/templates/shop/base.html:52
