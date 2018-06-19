@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-19 07:31+0000\n"
+"POT-Creation-Date: 2018-06-19 09:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,10 +31,13 @@ msgid "My Shopping Order:"
 msgstr "Đơn đặt hàng của tôi:"
 
 #: cart/templates/cart/detail.html:20 shop/templates/shop/base.html:23
+#: shop/templates/shop/base.html:36
 msgid "item"
 msgstr "mục"
 
 #: cart/templates/cart/detail.html:23 shop/templates/shop/base.html:26
+#: shop/templates/shop/base.html:38 shop/templates/shop/base.html:52
+#: shop/templates/shop/base.html:74
 msgid "Your cart is empty."
 msgstr "Giỏ của bạn trống."
 
@@ -47,7 +50,7 @@ msgstr "Hình ảnh"
 msgid "Product"
 msgstr "Sản phẩm"
 
-#: cart/templates/cart/detail.html:33
+#: cart/templates/cart/detail.html:33 shop/templates/shop/base.html:65
 msgid "Quantity"
 msgstr "Số lượng"
 
@@ -62,6 +65,16 @@ msgstr "Đơn giá"
 #: cart/templates/cart/detail.html:36
 msgid "Price"
 msgstr "Giá"
+
+#: cart/templates/cart/detail.html:54
+msgid "Update"
+msgstr "Cập nhật"
+
+#: cart/templates/cart/detail.html:66
+#: orders/templates/orders/order/create.html:31
+#: shop/templates/shop/base.html:50
+msgid "Total Cost:"
+msgstr "Tổng chi phí:"
 
 #: cart/templates/cart/detail.html:73
 msgid "Continue Shopping"
@@ -79,10 +92,6 @@ msgstr "Giỏ hàng của bạn | Checkout"
 #: orders/templates/orders/order/create.html:21
 msgid "Your Order"
 msgstr "Đơn hàng của bạn"
-
-#: orders/templates/orders/order/create.html:31
-msgid "Total Cost:"
-msgstr "Tổng chi phí:"
 
 #: orders/templates/orders/order/created.html:6
 msgid "Your Shopping Cart| Thank you"
