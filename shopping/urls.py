@@ -24,8 +24,5 @@ urlpatterns = [
     path('cart', include('cart.urls')),
     path('orders/', include('orders.urls')),
     path('', include('shop.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, show_indexes=True)
-
-urlpatterns += [
     path('i18n/', include('django.conf.urls.i18n')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, show_indexes=True)
