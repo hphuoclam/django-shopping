@@ -47,3 +47,4 @@ See also, a [ready-made application](https://github.com/heroku/python-getting-st
 - [Gunicorn](https://warehouse.python.org/project/gunicorn/)
 - [WhiteNoise](https://warehouse.python.org/project/whitenoise/)
 - [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
+# django-shopping
