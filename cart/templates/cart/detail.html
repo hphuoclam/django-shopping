@@ -1,5 +1,7 @@
 {% extends 'shop/base.html' %}
 {% load static %}
+{% load custom_tags %}
+
 {% block title %}
     Your Shopping Cart
 {% endblock %}
@@ -14,7 +16,7 @@
                     {% if cart|length > 0 %}
                         My Shopping Order:
                         <a href="{% url "cart:cart_detail" %}" style="color: #ffffff">
-                            {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+                            {{ totail_items }} item {{ totail_items|pluralize }}, {{ cart.get_total_price|price_view }}
                         </a>
                         {% else %}
                         Your cart is empty.
@@ -54,15 +56,15 @@
                             <td>
                                 <a href="{% url "cart:cart_remove" product.id %}">Remove</a>
                             </td>
-                            <td>kshs. {{ item.price }}</td>
-                            <td>kshs. {{ item.total_price }}</td>
+                            <td>{{ item.price|price_view }}</td>
+                            <td>{{ item.total_price|price_view }}</td>
                         </tr>
                     {% endwith %}
                 {% endfor %}
                 <tr style="background-color: #5AC8FA">
                     <td><b>Total</b></td>
                     <td colspan="4"></td>
-                    <td colspan="num"><b>kshs. {{ cart.get_total_price }}</b></td>
+                    <td colspan="num"><b>{{ cart.get_total_price|price_view }}</b></td>
                 </tr>
                 </tbody>
             </table>

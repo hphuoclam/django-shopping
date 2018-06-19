@@ -29,6 +29,37 @@
          {% endif %}
       </li>
     </ul>
+    <form action="{% url 'set_language' %}" method="post" id="set_language_form">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        {% for lang in LANGUAGES %}
+          {% if lang.0 == SELECTEDLANG %}
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ffffff">{{lang.1}} <span class="caret"></span></a>
+          {% endif %}
+        {% endfor %}
+        <ul class="dropdown-menu">
+          {% csrf_token %}
+          <input name="next" type="hidden" value="/" />
+          {% for lang in LANGUAGES %}
+              <li>
+                <a class="submit_language_form" href="#" value="{{lang.0}}">{{ lang.1 }}</a>
+              </li>
+          {% endfor %}
+          <input name="language" id="language" type="hidden" value=""/>
+        </ul>
+      </li>
+    </ul>
+    </form>
   </div><!-- /.navbar-collapse -->
   </div>
 </nav>
+
+<script>
+  $(document).ready(function() { 
+    $('.submit_language_form').click(function(e) {
+        e.preventDefault();
+        $('#set_language_form #language').val( $(this).attr("value"));
+        $('#set_language_form').submit();
+    });
+  });
+</script>

@@ -4,6 +4,7 @@
     {% if category %}{{ category.name }} {% else %} Products {% endif %}
 {% endblock %}
 
+{% load custom_tags %}
 {% block content %}
    <div class="container-fluid">
       <div class="row" style="margin-top: 6%">
@@ -22,7 +23,7 @@
                                 <h3 class="text-center">
                                     <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
                                 </h3>
-                                <p class="text-center">Kshs. {{ product.price }}</p>
+                                <p class="text-center">{{ product.price|price_view }}</p>
                             </div>
                         </div>
                       </div>

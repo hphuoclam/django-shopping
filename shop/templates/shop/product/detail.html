@@ -1,5 +1,7 @@
 {% extends 'shop/base.html' %}
 {% load static %}
+{% load custom_tags %}
+
 {% block title %}
     {% if category %}{{ category.name }} {% else %} Products {% endif %}
 {% endblock %}
@@ -20,8 +22,8 @@
                         <div class="col-md-6" style="padding-left: 20px">
                             <h3>{{ product.name }}</h3>
                             <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
-                            <p class="text-muted">Kshs. {{ product.price }}</p>
-                            <form action="{% url "cart:cart_add" product.id %}" method="post">
+                            <p class="text-muted">{{ product.price|price_view }}</p>
+                            <form class="form-inline" action="{% url "cart:cart_add" product.id %}" method="post">
                                 {% csrf_token %}
                                 {{ cart_product_form }}
                                 <input type="submit" value="add to cart" class="btn btn-primary">
