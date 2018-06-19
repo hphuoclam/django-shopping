@@ -15,7 +15,7 @@
 <div class="container">
     <div class="row" style="margin-top: 6%">
         <h1>{% trans 'haha' %}</h1>
-        <span class="badge pull-right" style="padding: 6px 12px; background: green">
+        <!--<span class="badge pull-right" style="padding: 6px 12px; background: green">
             {% with totail_items=cart|length %}
                 {% if cart|length > 0 %}
                     {% trans 'My Shopping Order:' %}
@@ -26,7 +26,56 @@
                     {% trans 'Your cart is empty.' %}
                 {% endif %}
             {% endwith %}
-         </span>
+        </span>-->
+
+        <div class="btn-group pull-right cart_cus">
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {% with totail_items=cart|length %}
+                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                    {% if cart|length > 0 %}
+                        {{ totail_items }} {% trans 'item' %} {{ totail_items|pluralize }}, {{ cart.get_total_price|price_view }}
+                    {% else %}
+                        {% trans 'Your cart is empty.' %}
+                    {% endif %}
+                {% endwith %}
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu cart">
+                {% with totail_items=cart|length %}
+                    {% if cart|length > 0 %}
+                        <li class="cart-header">
+                            {% with totail_items=cart|length %}
+                                {% if cart|length > 0 %}
+                                    <i class="glyphicon glyphicon-shopping-cart"></i><span class="badge bg-success">{{ totail_items }}</span>
+                                    <div class="pull-right color_bbb">{% trans 'Total Cost:' %} <span class="color_green">{{ cart.get_total_price|price_view }}</span></div>
+                                {% else %}
+                                    {% trans 'Your cart is empty.' %}
+                                {% endif %}
+                            {% endwith %}
+                        </li>
+                        <li>
+                            {% for item in cart %}
+                                {% with product=item.product  %}
+                                    <div class="row item vertical-align">
+                                        <div class="col-xs-3 pr0">
+                                            <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" alt="..." >
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div class="title">{{product.name}}</div>
+                                            <div class="price">{{ item.total_price|price_view }} <span>{% trans 'Quantity' %}: {{ item.quantity }}</span></div>
+                                        </div>
+                                    </div>
+                                {% endwith %}
+                            {% endfor %}
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{% url "cart:cart_detail" %}" class="btn btn-checkout">Checkout</a></li>
+                    {% else %}
+                        <li><a href="#" class="btn btn-checkout">{% trans 'Your cart is empty.' %}</a></li>
+                    {% endif %}
+                {% endwith %}
+            </ul>
+        </div>
     </div>
 </div>
 {% block content %}

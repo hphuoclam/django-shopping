@@ -65,12 +65,12 @@ msgstr "Giá"
 
 #: cart/templates/cart/detail.html:73
 msgid "Continue Shopping"
-msgstr ""
+msgstr "Tiếp tục mua sắm"
 
 #: cart/templates/cart/detail.html:74
 #: orders/templates/orders/order/create.html:12
 msgid "Checkout"
-msgstr "Tiếp tục mua sắm"
+msgstr "Checkout"
 
 #: orders/templates/orders/order/create.html:5
 msgid "Your Shopping Cart| Checkout"

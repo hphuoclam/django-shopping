@@ -1,45 +1,115 @@
+body{
+    color: #555;
+}
 .blog-header {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.blog-title {
-  margin-top: 30px;
-  margin-bottom: 0;
-  font-size: 60px;
-  font-weight: normal;
-}
-.blog-description {
-  font-size: 20px;
-  color: #999;
-}
-blog-main {
-  font-size: 18px;
-  line-height: 1.5;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
+.blog-title {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 60px;
+    font-weight: normal;
+}
+
+.blog-description {
+    font-size: 20px;
+    color: #999;
+}
+
+.blog-main {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
 /* Sidebar modules for boxing content */
+
 .sidebar-module {
-  padding: 15px;
-  margin: 0 -15px 15px;
+    padding: 15px;
+    margin: 0 -15px 15px;
 }
+
 .sidebar-module-inset {
-  padding: 15px;
-  background-color: #f5f5f5;
-  border-radius: 4px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
 }
+
 .sidebar-module-inset p:last-child,
 .sidebar-module-inset ul:last-child,
 .sidebar-module-inset ol:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
+
 .blog-post {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
 .blog-post-title {
-  margin-bottom: 5px;
-  font-size: 40px;
+    margin-bottom: 5px;
+    font-size: 40px;
 }
+
 .blog-post-meta {
-  margin-bottom: 20px;
-  color: #999;
+    margin-bottom: 20px;
+    color: #999;
+}
+
+.cart_cus .cart {
+    width: 200%;
+    padding: 15px;
+}
+
+.cart_cus .cart .cart-header{
+    padding: 10px 0 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart_cus .cart li .item {
+    padding-top: 15px;
+}
+
+.cart_cus .cart li .item .title {
+    font-size: 130%;
+}
+.cart_cus .cart li .item .price {
+    color: green;
+}
+.cart_cus .cart li .item .price span{
+    color: #bbb;
+    margin-left: 15px;
+}
+
+.cart_cus .cart li .item img {
+    width: 100%;
+}
+
+.cart_cus .cart .btn-checkout{
+    background: green;
+    color: #fff;
+    padding: 10px;
+}
+
+.p0 {
+    padding: 0 !important;
+}
+
+.pr0 {
+    padding-right: 0 !important;
+}
+
+.pl0 {
+    padding-left: 0 !important;
+}
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+.color_bbb{
+    color: #bbb;
+}
+.color_green{
+    color: green;
 }
