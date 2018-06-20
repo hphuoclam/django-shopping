@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 03:14+0000\n"
+"POT-Creation-Date: 2018-06-20 08:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,17 +26,17 @@ msgstr "Giỏ hàng"
 msgid "Your Shopping Cart"
 msgstr "Giỏ hàng của bạn"
 
-#: cart/templates/cart/detail.html:18 shop/templates/shop/base.html:21
+#: cart/templates/cart/detail.html:18 shop/templates/shop/base.html:20
 msgid "My Shopping Order:"
 msgstr "Đơn đặt hàng của tôi:"
 
-#: cart/templates/cart/detail.html:20 shop/templates/shop/base.html:23
-#: shop/templates/shop/base.html:36
+#: cart/templates/cart/detail.html:20 shop/templates/shop/base.html:22
+#: shop/templates/shop/base.html:35
 msgid "item"
 msgstr "sản phẩm"
 
-#: cart/templates/cart/detail.html:23 shop/templates/shop/base.html:26
-#: shop/templates/shop/base.html:38 shop/templates/shop/base.html:52
+#: cart/templates/cart/detail.html:23 shop/templates/shop/base.html:25
+#: shop/templates/shop/base.html:37 shop/templates/shop/base.html:51
 #: shop/templates/shop/base.html:74
 msgid "Your cart is empty."
 msgstr "Giỏ của bạn trống."
@@ -46,7 +46,7 @@ msgstr "Giỏ của bạn trống."
 msgid "Image"
 msgstr "Hình ảnh"
 
-#: cart/templates/cart/detail.html:32 shop/models.py:53
+#: cart/templates/cart/detail.html:32 shop/models.py:54
 msgid "Product"
 msgstr "Sản phẩm"
 
@@ -72,7 +72,7 @@ msgstr "Cập nhật"
 
 #: cart/templates/cart/detail.html:66
 #: orders/templates/orders/order/create.html:31
-#: shop/templates/shop/base.html:50
+#: shop/templates/shop/base.html:49
 msgid "Total Cost:"
 msgstr "Tổng chi phí:"
 
@@ -110,36 +110,22 @@ msgstr "Cảm ơn đã đi mua sắm với chúng tôi"
 msgid "Your order has been successfully completed. Your order number is"
 msgstr "Đơn hàng của bạn đã được hoàn tất. số đơn đặt hàng của bạn là"
 
-#: shop/admin.py:16 shop/models.py:80
-#, fuzzy
-#| msgid "Products Image"
-msgid "Product Image"
-msgstr "Hình ảnh sản phẩm"
-
-#: shop/admin.py:17 shop/models.py:81
-msgid "Products Image"
-msgstr "Hình ảnh sản phẩm"
-
 #: shop/apps.py:6 shop/apps.py:7
 msgid "Shop"
 msgstr "Cửa hàng"
 
-#: shop/models.py:18
+#: shop/models.py:19
 msgid "Category"
 msgstr "Thể loại"
 
-#: shop/models.py:19 shop/templates/shop/product/list.html:41
+#: shop/models.py:20 shop/templates/shop/product/list.html:21
 msgid "Categories"
 msgstr "Thể loại"
 
-#: shop/models.py:54 shop/templates/shop/product/detail.html:7
-#: shop/templates/shop/product/list.html:5
+#: shop/models.py:55 shop/templates/shop/product/detail.html:7
+#: shop/templates/shop/product/list.html:10
 msgid "Products"
 msgstr "Các sản phẩm"
-
-#: shop/templates/shop/base.html:17
-msgid "haha"
-msgstr "Tiếng Việt kaka"
 
 #: shop/templates/shop/navbar.html:43
 msgid "Logout"
@@ -153,19 +139,32 @@ msgstr "Đăng nhập"
 msgid "Sign up"
 msgstr "Đăng ký"
 
-#: shop/templates/shop/product/detail.html:28
+#: shop/templates/shop/product/detail.html:41
+msgid "In stock"
+msgstr "Trong kho"
+
+#: shop/templates/shop/product/detail.html:44
 msgid "Add to cart"
 msgstr "Thêm vào giỏ hàng"
 
-#: shop/templates/shop/product/list.html:43
+#: shop/templates/shop/product/detail.html:48
+#, fuzzy
+msgid "Products Image"
+msgstr "Hình ảnh sản phẩm"
+
+#: shop/templates/shop/product/detail.html:48
+msgid "Product Detail"
+msgstr "Chi tiết sản phẩm"
+
+#: shop/templates/shop/product/list.html:23
 msgid "All"
 msgstr "Tất cả"
 
-#: shopping/settings.py:120
+#: shopping/settings.py:121
 msgid "VietNam"
 msgstr "Tiếng Việt"
 
-#: shopping/settings.py:121
+#: shopping/settings.py:122
 msgid "English"
 msgstr "English"
 
@@ -1471,6 +1470,9 @@ msgstr ""
 #, python-format
 msgid "%s: error: %s\n"
 msgstr ""
+
+#~ msgid "haha"
+#~ msgstr "Tiếng Việt kaka"
 
 #~ msgid "quantity"
 #~ msgstr "số lượng"

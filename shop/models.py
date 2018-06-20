@@ -4,6 +4,7 @@ import datetime
 import os
 from django.utils.html import format_html
 from django.utils.translation import ugettext as _
+from ckeditor_uploader.fields import RichTextUploadingField
 
 STATIC_UPLOAD_PRODUCT_URL = 'static/upload/product/'
 
@@ -38,7 +39,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     name = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, db_index=True, unique=True)
-    description = models.TextField(blank=True)
+    description = RichTextUploadingField(null=True)
     # price = models.DecimalField(max_digits=10, decimal_places=2)
     price = models.DecimalField(max_digits=10, decimal_places=0)
     available = models.BooleanField(default=True)
@@ -48,7 +49,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to=upload_product_image , blank=True)
 
     class Meta:
-        ordering = ('name', )
+        ordering = ('-name', )
         index_together = (('id', 'slug'),)
         verbose_name = _('Product')
         verbose_name_plural = _('Products')

@@ -1,6 +1,9 @@
 body{
     color: #555;
 }
+*:focus{
+    outline: none !important;
+}
 .blog-header {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -128,4 +131,32 @@ body{
 }
 .sidebar-module{
     padding-top: 0;
+}
+.product_slide .slick-dots{
+    bottom: -50px;
+}
+.product_slide .slide_img{
+    width: 50%;
+    margin: auto;
+}
+.product_slide .slick-arrow:before{
+    color: #555;
+}
+.product_slide .slick-next{
+    right: 0;
+}
+.product_slide .slick-prev{
+    left    : 0;
+}
+.product_detail .price{
+    color: green;
+    font-weight: bold;
+}
+.product_detail .title{
+    margin-bottom: 50px;
+}
+.product_info{
+    font-size: 200%;
+    margin: 20px 0;
+    border-bottom: 1px solid #ddd;
 }

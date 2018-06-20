@@ -8,10 +8,10 @@ ITEM_PER_PAGE = 6
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
-    products = Product.objects.filter(available=True)
+    products = Product.objects.filter(available=True).order_by('-created_at')
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
-        products = Product.objects.filter(category=category)
+        products = Product.objects.filter(category=category).order_by('-created_at')
 
     paginator = Paginator(products, ITEM_PER_PAGE)
     page = request.GET.get('page')

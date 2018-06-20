@@ -9,6 +9,10 @@
 
 {% block content %}
 
+<script src="{% static 'slick/slick.min.js' %}" type="text/javascript"></script>
+<link rel="stylesheet" href="{% static 'slick/slick.css' %}">
+<link rel="stylesheet" href="{% static 'slick/slick-theme.css' %}">
+
 <div class="container">
     <div class="row" style="margin-top: 6%">
         <div class="col-sm-12 blog-main">
@@ -17,18 +21,33 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-md-6 text-center">
-                                <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" alt="..." style="height: 170px; width: auto">
+                                <div class="product_slide">
+                                    <div>
+                                        <img class="slide_img" src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}">
+                                    </div>
+                                    {% for value in product.product_images.all %}
+                                        <div>
+                                            <img class="slide_img" src="{% if value.image %} {{ value.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}">
+                                        </div>
+                                    {% endfor %}
+                                </div>
                             </div>
-                            <div class="col-md-6" style="padding-left: 20px">
-                                <h3>{{ product.name }}</h3>
-                                <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
-                                <p class="text-muted">{{ product.price|price_view }}</p>
+                            <div class="col-md-6 product_detail" style="padding-left: 20px">
+                                <div class="title">
+                                    <h3>{{ product.name }}</h3>
+                                    <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
+                                </div>
+                                <p class="price">{{ product.price|price_view }}</p>
+                                <p class="text-muted">{% trans 'In stock' %}: <span class="badge">{{ product.stock }}</span></p>
                                 <form class="form-inline" action="{% url "cart:cart_add" product.id %}" method="post">
                                     {% csrf_token %} {{ cart_product_form }}
                                     <input type="submit" value="{% trans 'Add to cart' %}" class="btn btn-primary">
                                 </form>
                             </div>
-                            <div class="col-md-12" style="margin-top: 50px;">{{ product.description|safe|linebreaksbr }}</div>
+                            <div class="col-md-12" style="margin-top: 50px;">
+                                <div class="product_info">{% trans 'Product Detail' %}</div>
+                                <div class="text-justify">{{ product.description|safe|linebreaksbr }}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -40,4 +59,15 @@
     <!-- /.row -->
 </div>
 <!-- /.container -->
+<script>
+    $('.product_slide').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+    });
+</script>
 {% endblock %}
