@@ -19,7 +19,7 @@ body{
 }
 
 .blog-main {
-    font-size: 18px;
+    /*font-size: 18px;*/
     line-height: 1.5;
 }
 
@@ -64,7 +64,7 @@ body{
 
 .cart_cus .cart .cart-header{
     padding: 10px 0 15px;
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
 }
 
 .cart_cus .cart li .item {
@@ -112,4 +112,20 @@ body{
 }
 .color_green{
     color: green;
+}
+.left-menu .panel-heading{
+    background: green;
+    color: #fff;
+    font-weight: bold;
+}
+.left-menu .list-group .list-group-item{
+    border-color: #d6e9c6;
+}
+.left-menu .list-group .list-group-item.active{
+    background: #d6e9c6;
+    color: green;
+    border-color: transparent;
+}
+.sidebar-module{
+    padding-top: 0;
 }

@@ -14,7 +14,6 @@
 {% include 'shop/navbar.html' %}
 <div class="container">
     <div class="row" style="margin-top: 6%">
-        <h1>{% trans 'haha' %}</h1>
         <!--<span class="badge pull-right" style="padding: 6px 12px; background: green">
             {% with totail_items=cart|length %}
                 {% if cart|length > 0 %}
@@ -53,6 +52,7 @@
                                 {% endif %}
                             {% endwith %}
                         </li>
+                        <li role="separator" class="divider"></li>
                         <li>
                             {% for item in cart %}
                                 {% with product=item.product  %}

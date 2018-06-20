@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-19 09:23+0000\n"
+"POT-Creation-Date: 2018-06-20 03:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: cart/forms.py:9
-msgid "quantity"
-msgstr "số lượng"
+#: cart/apps.py:6 cart/apps.py:7
+msgid "Cart"
+msgstr "Giỏ hàng"
 
 #: cart/templates/cart/detail.html:7 cart/templates/cart/detail.html:14
 msgid "Your Shopping Cart"
@@ -46,7 +46,7 @@ msgstr "Giỏ của bạn trống."
 msgid "Image"
 msgstr "Hình ảnh"
 
-#: cart/templates/cart/detail.html:32
+#: cart/templates/cart/detail.html:32 shop/models.py:53
 msgid "Product"
 msgstr "Sản phẩm"
 
@@ -85,6 +85,11 @@ msgstr "Tiếp tục mua sắm"
 msgid "Checkout"
 msgstr "Checkout"
 
+#: orders/apps.py:6 orders/apps.py:7
+#, fuzzy
+msgid "Orders"
+msgstr "Đơn hàng"
+
 #: orders/templates/orders/order/create.html:5
 msgid "Your Shopping Cart| Checkout"
 msgstr "Giỏ hàng của bạn | Checkout"
@@ -105,6 +110,33 @@ msgstr "Cảm ơn đã đi mua sắm với chúng tôi"
 msgid "Your order has been successfully completed. Your order number is"
 msgstr "Đơn hàng của bạn đã được hoàn tất. số đơn đặt hàng của bạn là"
 
+#: shop/admin.py:16 shop/models.py:80
+#, fuzzy
+#| msgid "Products Image"
+msgid "Product Image"
+msgstr "Hình ảnh sản phẩm"
+
+#: shop/admin.py:17 shop/models.py:81
+msgid "Products Image"
+msgstr "Hình ảnh sản phẩm"
+
+#: shop/apps.py:6 shop/apps.py:7
+msgid "Shop"
+msgstr "Cửa hàng"
+
+#: shop/models.py:18
+msgid "Category"
+msgstr "Thể loại"
+
+#: shop/models.py:19 shop/templates/shop/product/list.html:41
+msgid "Categories"
+msgstr "Thể loại"
+
+#: shop/models.py:54 shop/templates/shop/product/detail.html:7
+#: shop/templates/shop/product/list.html:5
+msgid "Products"
+msgstr "Các sản phẩm"
+
 #: shop/templates/shop/base.html:17
 msgid "haha"
 msgstr "Tiếng Việt kaka"
@@ -121,14 +153,9 @@ msgstr "Đăng nhập"
 msgid "Sign up"
 msgstr "Đăng ký"
 
-#: shop/templates/shop/product/detail.html:7
-#: shop/templates/shop/product/list.html:5
-msgid "Products"
-msgstr "Các sản phẩm"
-
-#: shop/templates/shop/product/list.html:41
-msgid "Categories"
-msgstr "Thể loại"
+#: shop/templates/shop/product/detail.html:28
+msgid "Add to cart"
+msgstr "Thêm vào giỏ hàng"
 
 #: shop/templates/shop/product/list.html:43
 msgid "All"
@@ -1444,3 +1471,6 @@ msgstr ""
 #, python-format
 msgid "%s: error: %s\n"
 msgstr ""
+
+#~ msgid "quantity"
+#~ msgstr "số lượng"
